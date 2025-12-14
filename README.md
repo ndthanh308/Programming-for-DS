@@ -1,5 +1,5 @@
 ## Tổng quan đồ án
-Đồ án cuối kì này được thực hiện nhằm mục đích thực hành trọn vẹn quy trình Khoa học Dữ liệu (Data Science Workflow) — từ việc tiếp cận nguồn dữ liệu thô đến việc trích xuất các thông tin giá trị (insights).
+Đồ án cuối kì này được thực hiện nhằm mục đích thực hành trọn vẹn quy trình Khoa học Dữ liệu (Data Science Workflow), từ việc tiếp cận nguồn dữ liệu thô đến việc trích xuất các thông tin giá trị (insights).
 
 Sử dụng bộ dữ liệu **Data Science Salaries 2025**, nhóm tập trung phân tích toàn cảnh thị trường lao động ngành dữ liệu trong giai đoạn 2020 - 2025, mục tiêu là đề xây dựng một những câu hỏi thực tế, có giá trị xoay quanh các vấn đề nóng hổi: tác động thực sự của **làn sóng AI (ChatGPT)**, mối tương quan giữa **lương và lạm phát**, cũng như bài toán **so sánh sức mua (PPP)** giữa các quốc gia, và đưa ra kết luận cho các câu hỏi đó.
 
