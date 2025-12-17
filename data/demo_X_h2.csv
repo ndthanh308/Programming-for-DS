@@ -1,0 +1,6 @@
+work_year,experience_level_encoded,company_size_encoded,remote_ratio,job_Data_Engineer,job_Data_Scientist,job_ML_AI_Engineer,job_Manager_Lead,job_Other
+2025,0,0,0,0,0,0,0,0
+2025,1,1,50,1,0,0,0,0
+2024,2,2,100,0,1,0,0,0
+2024,3,2,0,0,0,1,0,0
+2023,2,1,100,0,0,0,1,0
