@@ -33,7 +33,6 @@ Kết quả nghiên cứu sẽ cung cấp góc nhìn chiến lược, giúp nhâ
 2.  **Câu hỏi 2:** Cơn sốt AI (ChatGPT bùng nổ cuối 2022) tác động thế nào đến cấu trúc lương ngành Data?
 3.  **Câu hỏi 3:** So sánh sức mua (PPP): Lương $15k ở Châu Á có 'nghèo' hơn $100k ở Mỹ?
 4.  **Câu hỏi 4:** Nên học gì và chọn nước nào để tối đa hóa lương trong 3 năm tới?
-5.  **Câu hỏi 5:** *(Đang cập nhật)*
 
 ---
 
