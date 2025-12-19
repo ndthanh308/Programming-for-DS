@@ -49,12 +49,55 @@ Kết quả nghiên cứu sẽ cung cấp góc nhìn chiến lược, giúp nhâ
 ---
 
 ## Cấu trúc thư mục
-*(Để trống)*
+| Đường dẫn | Nội dung |
+|---|---|
+| `data/` | Chứa các file CSV: dữ liệu gốc, dữ liệu trung gian sau xử lý, và các file kết quả dự đoán demo. |
+| `notebooks/` | Các notebook theo từng bước workflow (01 → 05) để tái lập toàn bộ phân tích/mô hình. |
+| `requirements.txt` | Danh sách thư viện Python cần thiết để chạy project. |
+| `summary.md` | Báo cáo tổng kết & phản ánh cá nhân (template). |
+| `LICENSE` | Giấy phép của repo. |
+| `venv/` | Môi trường ảo (nếu có; không bắt buộc). |
+
+Luồng dữ liệu chính (input/output):
+- Input EDA: `data/original_data.csv`
+- Output EDA (drop duplicates): `data/drop_dup_data.csv`
+- Output preprocessing/split:
+	- `data/train_hypo_1.csv`, `data/test_hypo_1.csv`
+	- `data/train_hypo_2.csv`, `data/test_hypo_2.csv`
+- Demo features & dự đoán:
+	- `data/demo_X_h1.csv`, `data/demo_X_h2.csv`
+	- `data/demo_preds_lr.csv`
+	- `data/demo_preds_xgb_baseline.csv`, `data/demo_preds_xgb_tuned.csv`, `data/demo_preds_xgb_compare.csv`
 
 ---
 
 ## Hướng dẫn chạy
-*(Để trống)*
+Yêu cầu: Python 3.x và `pip`. Để chạy notebook cần Jupyter (Notebook/Lab).
+
+### 1) Tạo môi trường ảo + cài thư viện
+Chạy tại thư mục gốc repo:
+- `python -m venv .venv`
+- PowerShell: `\.\.venv\Scripts\Activate.ps1`
+- CMD: `\.\.venv\Scripts\activate`
+- `python -m pip install -r requirements.txt`
+
+### 2) Cài bổ sung nếu thiếu (chỉ khi gặp lỗi)
+- Jupyter: `python -m pip install notebook` (hoặc `python -m pip install jupyterlab`)
+- XGBoost (do notebook 05 dùng): `python -m pip install xgboost`
+
+### 3) Mở Jupyter đúng thư mục để không lỗi đường dẫn
+Do các notebook thường dùng đường dẫn dạng `../data/...`, nên khuyến nghị mở Jupyter từ thư mục `notebooks/`:
+- `cd notebooks`
+- `jupyter lab` (hoặc `jupyter notebook`)
+
+### 4) Chạy notebooks theo thứ tự khuyến nghị
+- `01_data_collection.ipynb`: mô tả nguồn dữ liệu & giấy phép (không bắt buộc để chạy pipeline).
+- `02_general_eda.ipynb`: đọc `data/original_data.csv` và xuất `data/drop_dup_data.csv`.
+- `03Dinh_data_ques.ipynb` + `03Thanh_data_ques.ipynb`: phân tích/câu hỏi dựa trên `data/drop_dup_data.csv`.
+- `04_preprocessing_feature_modeling.ipynb`: tạo feature + chia train/test và lưu các file `train/test_hypo_*.csv` vào `data/`.
+- `05_regression_model.ipynb`: train & đánh giá Linear Regression + XGBoost, đồng thời xuất các file demo dự đoán vào `data/`.
+
+Ghi chú: Repo đã có sẵn các file trung gian/kết quả trong `data/`, nên bạn có thể chạy thẳng notebook 05 nếu không cần tái tạo toàn bộ pipeline.
 
 ---
 
